@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="336dp"
+    android:layout_height="426dp"
+    android:gravity="center">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.escience.weather.View.RoundImageView
+            android:id="@+id/bkg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:radius="10dp"
+            android:src="@drawable/imag_back_little_clear" />
+
+        <ImageView
+            android:id="@+id/iv_dislike"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:alpha="0"
+            android:src="@drawable/ic_like" />
+
+        <ImageView
+            android:id="@+id/iv_like"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:alpha="0"
+            android:src="@drawable/ic_like_click" />
+        <com.escience.weather.View.CircleImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/magic_4margin"
+            android:src="@drawable/imag_photo"
+            android:id="@+id/head" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/magic_2margin"
+            android:layout_below="@+id/head"
+            android:layout_centerHorizontal="true"
+            android:text="Liberation"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size"
+            android:id="@+id/nick"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/nick"
+            android:layout_toEndOf="@+id/nick"
+            android:layout_alignTop="@id/nick"
+            android:layout_alignBottom="@id/nick">
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:id="@+id/sex"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/magic_2margin"
+                android:layout_marginStart="@dimen/magic_2margin"
+                android:src="@drawable/ic_girl"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            android:layout_alignParentBottom="true">
+
+            <com.escience.weather.View.RoundImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:radius="10dp"
+                android:src="@drawable/imag_back_white_translucent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="4dp"
+                    android:layout_weight="5">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/text_size_big"
+                            android:gravity="center"
+                            android:id="@+id/like_count"
+                            android:textColor="@android:color/secondary_text_light"
+                            android:text="234"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/text_size_small"
+                            android:gravity="center"
+                            android:text="获赞"
+                            android:textColor="@android:color/secondary_text_light"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <com.escience.weather.View.RoundImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        app:radius="10dp"
+                        android:src="@drawable/imag_back_white" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/magic_2margin"
+                        android:paddingBottom="@dimen/magic_6margin"
+                        android:paddingRight="@dimen/magic_4margin"
+                        android:paddingLeft="@dimen/magic_4margin"
+                        android:gravity="center_vertical|start"
+                        android:textSize="@dimen/text_size_big"
+                        android:id="@+id/msg"
+                        android:textColor="@android:color/black"
+                        android:layout_centerInParent="true"
+                        android:text="哈哈哈哈，希望我是个穿天猴，开心就上天，不开心就爆炸。"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/text_size_small"
+                        android:id="@+id/time"
+                        android:layout_alignParentBottom="true"
+                        android:text="2017/11/11 12:34"
+                        android:gravity="center_vertical|end"
+                        android:padding="@dimen/magic_2margin"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/text_size_small"
+                        android:id="@+id/place"
+                        android:layout_alignParentBottom="true"
+                        android:text="四川 成都 14℃"
+                        android:gravity="center_vertical|start"
+                        android:padding="@dimen/magic_2margin"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
